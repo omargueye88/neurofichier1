@@ -1,0 +1,138 @@
+
+/* Style du menu latéral */
+.sidebar {
+  height: 100%;
+  width: 0; /* caché par défaut */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 100px;
+}
+
+.sidebar a {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+/* Bouton fermer */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 36px;
+}
+
+/* Bouton ouvrir */
+.open-btn {
+  font-size: 30px;
+  cursor: pointer;
+  color: #111;
+  padding: 10px;
+}
+
+/* Contenu */
+.content {
+  padding: 20px;
+}
+h2, h3{
+  text-align: center;
+  color: beige;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  
+}
+.btn{
+  display: grid;
+  color:white;
+  justify-content: left;
+  width: 300px;
+  align-items: left;
+  
+  margin: 50px; 
+  gap: 20px;
+  padding: 0;
+}
+
+#btnaccueil{
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  margin: 95px;
+  background-color: bisque;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  font-size: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.commmentaire{
+  margin-top: 10px;
+  background-size: cover;
+  height: 100vh ;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+.file-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+.file-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.file-card:hover {
+  transform: scale(1.05);
+}
+.file-icon {
+  font-size: 50px;
+}
+.file-name {
+  margin-top: 10px;
+  font-size: 14px;
+  word-break: break-all;
+}
+
+a.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  margin: 95px;
+  background-color: bisque;
+}
+a.btn:hover {
+  background-color: #ffe4c4;
+}
+.btn1{
+  display: flex;
+  margin: 50px;
+}
