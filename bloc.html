@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Organisation par IA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            padding: 20px;
+        }
+        .bloc {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #444;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin: 6px 0;
+            padding: 8px;
+            background: #f0f0f0;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body style="background-color: bisque;">
+    <h1>📂 Organisation intelligente de vos fichiers</h1>
+    <input type="text" id="searchBloc" placeholder="🔍 Rechercher un fichier dans un bloc..." 
+    style="width: 100%; padding: 8px; margin-bottom: 15px; font-size: 25px;">
+
+        {% for  nom_bloc, fichiers in groupe_fichier.items() %}
+        <div style="margin:20px; padding:10px; border:1px solid #ccc; border-radius:10px;">
+            <h3>{{ nom_bloc }}</h3>
+            <ul>
+            {% for fichier in fichiers %}
+                <li>
+                <a href="{{ url_for('uploaded_file', filename=fichier) }}" target="_blank">
+                    📄 {{ fichier }}
+                </a>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+
+        
+
+            <script src="{{ url_for ('static', filename = 'js/script.js')}}"></script>  
+</body>
+</html>

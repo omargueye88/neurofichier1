@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>application d'extension de memoire intelligente</title>
+    <link rel = "stylesheet" href="{{url_for('static', filename = 'css/style.css')}}">
+    
+</head>
+<body style="background-image: url(static/imagebody.png);">
+  
+   <span class="open-btn" onclick="openNav()">☰ Menu</span>
+   <div class="commentaire">
+    <textarea style="width: 100vw; text-align: center; font-weight:bold; margin: 10px 10px;" placeholder="LAISSER UN COMMENTAIRE "></textarea>
+    <input  type="submit" value="soumettre" style="display: block; background-color: burlywood; font-size: medium; justify-content: center;">
+   </div>
+   
+     <!--Barre latérale -->
+    <div id="sidebar" class="sidebar">
+      <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
+      <a href="{{ url_for('home') }}">🏠 Accueil</a>
+      <a href="{{ url_for('file') }}">📂 Vos documents</a>
+      <a href="{{ url_for('bloc') }}">🧩 Vos blocs d’intention</a>
+      <a href="{{ url_for('apropos') }}">ℹ️ À propos</a>
+      <a href="{{ url_for('contact') }}">🚨Contacter nous</a>
+      <a href="{{ url_for('auth') }}">💻Creer un compte</a>
+    </div> 
+    <h2>Bienvenu(e) dans NEURO-FICHIER votre application d'extension de memoire intelligente😍🙌</h2>
+    <h2>Ici vos documents📑 seront rangés et organisés selon votre</h2>
+    <h2>preference par l'IA</h2>
+    
+    <form action="{{ url_for('telecharger') }}" method="POST" enctype="multipart/form-data">
+      <input type="file" name="document" style="font-size: 25px;" required>
+      <button style="padding: 10px 20px; font-size: 16px;" type="submit">📂 Ajouter des documents</button>
+    </form>
+    <div class="btn1">
+      <!-- Bouton qui lance l'analyse -->
+      <form action="{{ url_for('bloc') }}" method="post">
+        <button type="submit" 
+                style="padding: 12px 25px; 
+                      margin-top: 20px; 
+                      font-size: 18px; 
+                      border: none; 
+                      border-radius: 8px; 
+                      background: #4CAF50; 
+                      color: white; 
+                      cursor: pointer;">
+          🚀 Organiser mes fichiers avec l’IA
+        </button>
+      </form>
+      <a href="{{ url_for('file') }}" class="btn">Faire une analyse manuellement</a>
+    </div>
+    
+    <div style="color: aliceblue;">
+      <b>2025 © GUEYE DEV FB</b>
+      <b>📴 📱 📲 🖨 📑 📃 📓 💡 📩 🗑</b>
+    </div>
+    <script src="{{ url_for ('static', filename = 'js/script.js')}}"></script>  
+</body>
+</html>
